@@ -1,0 +1,28 @@
+#include "linear_search.h"
+#include <iostream>
+
+int main() {
+    cout << "\n" << endl;
+    
+    // initializing a data with test data
+    vector<int> items = {1, 2, 3, 4, 3, 5, 3};
+    int target = 3;
+
+    // displaying result from the linear search last function
+    int result = linear_search_last(items, target, 0);
+
+    // outputting the final result
+    cout << "Data : ";
+    for (int i = 0; i < items.size(); i++) {
+        cout << items[i] << " ";
+    }
+    cout << "\n" << endl;
+    
+    if (result != -1) {
+        cout << "Last occurrence of " << target << " is at index: " << result << endl;
+    } else {
+        cout << "Target not found." << endl;
+    }
+
+    return 0;
+}
