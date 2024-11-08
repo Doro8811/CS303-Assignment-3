@@ -1,0 +1,25 @@
+#include "LinkedList.h"
+
+using namespace std;
+
+int main() {
+    shared_ptr<Node> sample = nullptr;
+
+    // Insert elements into the list
+    insertHead(sample, 6);
+    insertHead(sample, 8);
+    insertHead(sample, 23);
+    insertHead(sample, 2);
+    insertHead(sample, 15);
+
+    cout << "Original List: ";
+    printList(sample);
+
+    // Sort the list
+    sample = insertionSort(sample);
+
+    cout << "Sorted List: ";
+    printList(sample);
+
+    return 0;
+}
